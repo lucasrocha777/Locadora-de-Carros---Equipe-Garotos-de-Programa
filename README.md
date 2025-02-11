@@ -13,12 +13,11 @@ O sistema será desenvolvido seguindo os princípios da **análise e design orie
 - Garantir uma **documentação completa** do código e seu funcionamento.
 
 ## 🛠️ Tecnologias Utilizadas
-- **Linguagem:** Python / Java / C++ (Definir a linguagem escolhida pelo grupo)
-- **IDE:** VS Code / IntelliJ / PyCharm (ou outra IDE utilizada)
-- **Banco de Dados:** Arquivos JSON / SQLite / MySQL (caso aplicável)
+- **Linguagem:** Python 
+- **IDE:** VS Code
 - **Gerenciamento de versão:** Git & GitHub
-- **Ferramentas de diagramação:** Astah Community / Draw.io / Miro
-
+- **Ferramentas de diagramação:** Draw.io
+  
 ## 📜 Regras de Negócio
 - O sistema deve permitir **cadastro, remoção, edição e listagem de veículos**.
 - Clientes podem **alugar** e **devolver** veículos, com cálculo de valores baseado no tempo de uso.
