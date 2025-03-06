@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>MidNight Car Rent</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+      /* Estilo para o link "Voltar para a página inicial" */
+      .voltar-inicio {
+        display: inline-block;
+        margin: 20px auto;
+        padding: 8px 16px;
+        font-size: 14px;
+        color: white;
+        background-color: #007BFF;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        width: fit-content;
+        text-align: center;
+      }
+
+      .voltar-inicio:hover {
+        background-color: #0056b3;
+      }
+
+      /* Estilo para o botão "Ver Histórico" */
+      .ver-historico {
+        display: inline-block;
+        padding: 5px 10px;
+        font-size: 12px;
+        color: white;
+        background-color: #28a745;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+
+      .ver-historico:hover {
+        background-color: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Logo -->
+      <img src="{{ url_for('static', filename='src/Logo_Midnight.png') }}" alt="Logo MidNight Car Rent" />
+    </header>
+      
+    <!-- Menu de navegação -->
+    <section>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Início</a></li>
+          <li><a href="{{ url_for('listar_veiculos') }}">Veículos</a></li>
+          <li><a href="{{ url_for('sobre') }}">Sobre</a></li>
+          <li><a href="{{ url_for('cadastrar_cliente') }}">Cadastro</a></li>
+        </ul>
+      </nav>
+    </section>
+    
+    <div id="Carros-demonstracao">
+      <h1>Bem-vindos ao MidNight Club Car Rent! Aqui você aluga os veículos ao seu gosto.</h1>
+    </div>
+
+    <!-- Área principal do site -->
+    <main>
+      {% block content %}
+      <!-- O conteúdo específico de cada página será inserido aqui -->
+      {% endblock %}
+    </main>
+  </body>
+</html>

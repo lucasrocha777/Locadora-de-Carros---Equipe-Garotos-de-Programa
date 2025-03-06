@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="sobre-wrapper">
+    <div class="sobre-banner">
+        <h1>Sobre a Midnight Car Rent</h1>
+        <p>Qualidade e confiança sobre quatro (ou duas) rodas</p>
+    </div>
+
+    <div class="sobre-content">
+        <section class="sobre-bloco">
+            <h2>Nosso Objetivo</h2>
+            <p>Na Midnight Car Rent, queremos ir além do simples aluguel de veículos. Nosso objetivo é oferecer uma experiência premium, conectando você ao veículo perfeito para cada ocasião. Seja para uma viagem de negócios, um passeio de fim de semana ou para o dia a dia, temos a opção certa para você.</p>
+        </section>
+
+        <section class="sobre-bloco">
+            <h2>O que fazemos</h2>
+            <p>Somos uma locadora moderna, com foco em agilidade, transparência e conforto. Trabalhamos com uma frota atualizada, com carros e motos revisados, prontos para sua aventura. Nosso processo é 100% transparente, com reservas online e suporte personalizado antes, durante e após a locação.</p>
+        </section>
+
+        <section class="sobre-bloco">
+            <h2>Entre em Contato</h2>
+            <p><strong>📞 Telefone:</strong> (11) 99999-9999</p>
+            <p><strong>📷 Instagram:</strong> <a href="https://www.instagram.com/midnightcarrent" target="_blank">@midnightcarrent</a></p>
+            <p><strong>📧 E-mail:</strong> contato@midnightcarrent.com.br</p>
+        </section>
+    </div>
+</div>
+
+<style>
+    .sobre-wrapper {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sobre-banner {
+        background: url('https://images.unsplash.com/photo-1605557936305-7e3f7a74a49c') no-repeat center center/cover;
+        color: rgb(24, 18, 18);
+        text-align: center;
+        padding: 80px 20px;
+        text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+    }
+
+    .sobre-banner h1 {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .sobre-banner p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+    }
+
+    .sobre-content {
+        max-width: 900px;
+        margin: 40px auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .sobre-bloco {
+        margin-bottom: 30px;
+    }
+
+    .sobre-bloco h2 {
+        font-size: 1.8rem;
+        color: #333;
+        border-left: 5px solid #333;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .sobre-bloco p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .sobre-banner {
+            padding: 50px 15px;
+        }
+        .sobre-banner h1 {
+            font-size: 2rem;
+        }
+        .sobre-content {
+            padding: 20px;
+        }
+    }
+</style>
+{% endblock %}

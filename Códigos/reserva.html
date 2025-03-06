@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h2>Reservar Veículo</h2>
+  <form method="POST" action="{{ url_for('reservar_veiculo') }}">
+    <label for="cliente">Cliente:</label>
+    <select name="cliente" id="cliente">
+      {% for cliente in clientes %}
+        <option value="{{ loop.index0 }}">{{ cliente.nome }} (CPF: {{ cliente.cpf }})</option>
+      {% endfor %}
+    </select>
+    <br>
+    <label for="veiculo">Veículo:</label>
+    <select name="veiculo" id="veiculo">
+      {% for veiculo in veiculos %}
+        <option value="{{ loop.index0 }}">{{ veiculo.descricao() }}</option>
+      {% endfor %}
+    </select>
+    <br>
+    <label for="data_inicio">Data de Início:</label>
+    <input type="date" name="data_inicio" id="data_inicio" required>
+    <br>
+    <label for="data_fim">Data de Fim:</label>
+    <input type="date" name="data_fim" id="data_fim" required>
+    <br>
+    <button type="submit">Reservar</button>
+  </form>
+
+  <!-- Lista de clientes com botão "Ver Histórico" -->
+  <h3>Clientes Cadastrados</h3>
+  <ul>
+    {% for cliente in clientes %}
+      <li>
+        {{ cliente.nome }} (CPF: {{ cliente.cpf }})
+        <a href="{{ url_for('ver_historico', cliente_id=loop.index0) }}" class="ver-historico" style="margin-left: 10px;">Ver Histórico</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p>Não tem cadastro? <a href="{{ url_for('cadastrar_cliente') }}">Cadastre-se aqui</a>.</p>
+{% endblock %}
